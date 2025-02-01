@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_logo"
+        tools:context=".SecondPageActivity">
+
+    <TextView
+            android:id="@+id/headingTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Movie List"
+            android:textSize="30dp"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/myProductsRecyclerView"
+            android:gravity="center" />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myProductsRecyclerView"
+            android:layout_width="409dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headingTextView"
+            tools:listitem="@layout/single_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
